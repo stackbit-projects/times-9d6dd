@@ -1,0 +1,584 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+publishDir: public
+dataDir: src/resources/source
+models:
+  config:
+    type: data
+    label: Config
+    file: config.json
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: label
+        label: Label
+      - type: string
+        name: version
+        label: Version
+      - type: string
+        name: license
+        label: License
+      - type: object
+        name: assets
+        label: Assets
+        fields:
+          - type: string
+            name: basePath
+            label: Base Path
+          - type: list
+            name: css
+            label: Css
+            items:
+              type: string
+          - type: list
+            name: js
+            label: Js
+            items:
+              type: string
+      - type: object
+        name: componentProperties
+        label: Component Properties
+        fields:
+          - type: object
+            name: selected-menu
+            label: Selected Menu
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: string
+                name: value
+                label: Value
+          - type: object
+            name: position
+            label: Position
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: list
+                name: options
+                label: Options
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: caption
+                      label: Caption
+                    - type: string
+                      name: value
+                      label: Value
+          - type: object
+            name: image-position
+            label: Image Position
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: list
+                name: options
+                label: Options
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: caption
+                      label: Caption
+                    - type: string
+                      name: value
+                      label: Value
+          - type: object
+            name: teaser-image-position
+            label: Teaser Image Position
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: list
+                name: options
+                label: Options
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: caption
+                      label: Caption
+                    - type: string
+                      name: value
+                      label: Value
+          - type: object
+            name: container-style-breath
+            label: Container Style Breath
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: string
+                name: value
+                label: Value
+          - type: object
+            name: container-style-lined
+            label: Container Style Lined
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: string
+                name: value
+                label: Value
+          - type: object
+            name: options
+            label: Options
+            fields:
+              - type: string
+                name: id
+                label: Id
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: list
+                name: options
+                label: Options
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: caption
+                      label: Caption
+                    - type: string
+                      name: value
+                      label: Value
+          - type: object
+            name: featured
+            label: Featured
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: string
+                name: value
+                label: Value
+          - type: object
+            name: unordered
+            label: Unordered
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: string
+                name: value
+                label: Value
+          - type: object
+            name: large
+            label: Large
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: string
+                name: value
+                label: Value
+          - type: object
+            name: list-type
+            label: List Type
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: type
+                label: Type
+              - type: list
+                name: options
+                label: Options
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: caption
+                      label: Caption
+                    - type: string
+                      name: value
+                      label: Value
+      - type: list
+        name: layouts
+        label: Layouts
+        items:
+          type: object
+          fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: caption
+              label: Caption
+            - type: markdown
+              name: wrapper
+              label: Wrapper
+            - type: list
+              name: defaultContent
+              label: Default Content
+              items:
+                type: object
+                fields:
+                  - type: string
+                    name: identifier
+                    label: Identifier
+                  - type: object
+                    name: styles
+                    label: Styles
+                    fields:
+                      - type: string
+                        name: container-style-lined
+                        label: Container Style Lined
+                      - type: string
+                        name: container-style-breath
+                        label: Container Style Breath
+                  - type: object
+                    name: content
+                    label: Content
+                    fields:
+                      - type: string
+                        name: title
+                        label: Title
+                  - type: object
+                    name: containers
+                    label: Containers
+                    fields:
+                      - type: list
+                        name: column-one
+                        label: Column One
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                            - type: object
+                              name: styles
+                              label: Styles
+                              fields:
+                                - type: string
+                                  name: teaser-image-position
+                                  label: Teaser Image Position
+                      - type: list
+                        name: column-two
+                        label: Column Two
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                      - type: list
+                        name: column-three
+                        label: Column Three
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                      - type: list
+                        name: column-four
+                        label: Column Four
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                      - type: list
+                        name: header
+                        label: Header
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                      - type: list
+                        name: main
+                        label: Main
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                            - type: object
+                              name: styles
+                              label: Styles
+                              fields:
+                                - type: string
+                                  name: container-style-lined
+                                  label: Container Style Lined
+                            - type: object
+                              name: content
+                              label: Content
+                              fields:
+                                - type: string
+                                  name: title
+                                  label: Title
+                            - type: object
+                              name: containers
+                              label: Containers
+                              fields:
+                                - type: list
+                                  name: gallery
+                                  label: Gallery
+                                  items:
+                                    type: object
+                                    fields:
+                                      - type: string
+                                        name: identifier
+                                        label: Identifier
+                                - type: list
+                                  name: image
+                                  label: Image
+                                  items:
+                                    type: object
+                                    fields:
+                                      - type: string
+                                        name: identifier
+                                        label: Identifier
+                                - type: list
+                                  name: video
+                                  label: Video
+                                  items:
+                                    type: object
+                                    fields:
+                                      - type: string
+                                        name: identifier
+                                        label: Identifier
+                      - type: list
+                        name: sidebar-ads-top
+                        label: Sidebar Ads Top
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                      - type: list
+                        name: sidebar
+                        label: Sidebar
+                        items:
+                          type: model
+                          models:
+                            - object_uq31yorn83
+                            - object_2ir7ir8wub
+                      - type: list
+                        name: sidebar-ads-bottom
+                        label: Sidebar Ads Bottom
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                      - type: list
+                        name: footer
+                        label: Footer
+                        items:
+                          type: object
+                          fields:
+                            - type: string
+                              name: identifier
+                              label: Identifier
+                            - type: object
+                              name: content
+                              label: Content
+                              fields:
+                                - type: string
+                                  name: title
+                                  label: Title
+                            - type: object
+                              name: containers
+                              label: Containers
+                              fields:
+                                - type: list
+                                  name: column-one
+                                  label: Column One
+                                  items:
+                                    type: object
+                                    fields:
+                                      - type: string
+                                        name: identifier
+                                        label: Identifier
+                                - type: list
+                                  name: column-two
+                                  label: Column Two
+                                  items:
+                                    type: object
+                                    fields:
+                                      - type: string
+                                        name: identifier
+                                        label: Identifier
+            - type: list
+              name: groups
+              label: Groups
+              items:
+                type: object
+                fields:
+                  - type: string
+                    name: label
+                    label: Label
+                  - type: list
+                    name: components
+                    label: Components
+                    items:
+                      type: string
+      - type: string
+        name: defaultLayout
+        label: Default Layout
+      - type: object
+        name: defaultComponents
+        label: Default Components
+        fields:
+          - type: string
+            name: paragraph
+            label: Paragraph
+          - type: string
+            name: image
+            label: Image
+          - type: string
+            name: html
+            label: Html
+      - type: object
+        name: imageRatios
+        label: Image Ratios
+        fields:
+          - type: object
+            name: '16:9'
+            label: 16 9
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: ratio
+                label: Ratio
+          - type: object
+            name: '1:1'
+            label: 1 1
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: ratio
+                label: Ratio
+          - type: object
+            name: '4:3'
+            label: 4 3
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: ratio
+                label: Ratio
+          - type: object
+            name: '3:4'
+            label: 3 4
+            fields:
+              - type: string
+                name: label
+                label: Label
+              - type: string
+                name: ratio
+                label: Ratio
+      - type: object
+        name: prefilledComponents
+        label: Prefilled Components
+        fields:
+          - type: object
+            name: head
+            label: Head
+            fields:
+              - type: object
+                name: author
+                label: Author
+                fields:
+                  - type: string
+                    name: value
+                    label: Value
+                  - type: string
+                    name: type
+                    label: Type
+      - type: list
+        name: metadata
+        label: Metadata
+        items:
+          type: object
+          fields:
+            - type: string
+              name: identifier
+              label: Identifier
+            - type: string
+              name: type
+              label: Type
+            - type: list
+              name: matches
+              label: Matches
+              items:
+                type: string
+            - type: boolean
+              name: isEditable
+              label: Is Editable
+            - type: list
+              name: imageRatios
+              label: Image Ratios
+              items:
+                type: string
+  object_uq31yorn83:
+    type: object
+    label: Object 1
+    fields: []
+  object_2ir7ir8wub:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: identifier
+        label: Identifier
+      - type: object
+        name: content
+        label: Content
+        fields:
+          - type: string
+            name: title
+            label: Title
